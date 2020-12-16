@@ -24,7 +24,6 @@ function playComputer () {
     else if (numberHand === 2) {
         computer = "ciseau";
     }
-    console.log(numberHand + computer);
 }
 
 //Quand on appuie sur un des boutons, la valeur de chacun est rentrer et comparer face a la valeur de l'ordianteur et renvoie
