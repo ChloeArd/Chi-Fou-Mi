@@ -143,7 +143,6 @@ function continu() {
     let button = document.createElement("button");
     button.addEventListener("click", function (){
         playComputer();
-        console.log("Je suis passé dedans " + computer)
     })
     button.innerHTML = "Continuer";
     container.appendChild(button);
