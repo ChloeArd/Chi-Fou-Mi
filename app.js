@@ -1,4 +1,3 @@
-let player = "";
 let computer = "";
 let numberHand;
 let container = document.getElementById("container");
@@ -9,12 +8,9 @@ let lost = 0;
 
 //D'abord si on clique sur le bouton feuille alors le joueur a choisi feuille et comparer sont choix face à l'ordinateur et retourner
 //s'il a perdu, gagné ou si c'est égalité et faire que le joueur ou l'ordinateur prend un point si gagné.
-
 let feuille = document.getElementById("feuille").value = "feuille";
 let pierre = document.getElementById("pierre").value = "pierre";
 let ciseau = document.getElementById("ciseau").value = "ciseau";
-console.log("La valeur de feuille: " + feuille + ", la valeur de pierre: " + pierre + " et la valeur de ciseau: " + ciseau);
-
 
 //L'ordinateur doit chosisir une main aleatoirement entre les 3, du coup on crée une fonction.
 function playComputer () {
@@ -31,13 +27,14 @@ function playComputer () {
     console.log(numberHand + computer);
 }
 
-//Quand on appuie sur un des boutons la fonction game apparait.
+//Quand on appuie sur un des boutons, la valeur de chacun est rentrer et comparer face a la valeur de l'ordianteur et renvoie
+//un résultat.
 document.getElementById("feuille").addEventListener("click", function (){
-    console.log(feuille);
-    console.log(computer);
     if (feuille && computer === "ciseau") {
         div1.innerHTML = "Joueur: " + feuille + " <-> ordinateur: " + computer;
         div2.innerHTML = "Vous avez perdu !";
+        div2.style.color = "red";
+        div2.style.fontSize = "30px";
         lost += 1;
         score();
         container.appendChild(div1)
@@ -46,6 +43,8 @@ document.getElementById("feuille").addEventListener("click", function (){
     else if (feuille && computer === "pierre") {
         div1.innerHTML = "Joueur: " + feuille + " <-> ordinateur: " + computer;
         div2.innerHTML = "Vous avez gagné !";
+        div2.style.color = "#38761D";
+        div2.style.fontSize = "30px";
         won += 1;
         score();
         container.appendChild(div1);
@@ -54,6 +53,8 @@ document.getElementById("feuille").addEventListener("click", function (){
     else if (feuille && computer === "feuille") {
         div1.innerHTML = "Joueur: " + feuille + " <-> ordinateur: " + computer;
         div2.innerHTML = "Egalité !";
+        div2.style.color = "orange";
+        div2.style.fontSize = "30px";
         container.appendChild(div1);
         container.appendChild(div2);
     }
@@ -63,6 +64,8 @@ document.getElementById("pierre").addEventListener("click", function (){
     if (pierre && computer === "feuille") {
         div1.innerHTML = "Joueur: " + pierre + " <-> ordinateur: " + computer;
         div2.innerHTML = "Vous avez perdu !";
+        div2.style.color = "red";
+        div2.style.fontSize = "30px";
         lost += 1;
         score();
         container.appendChild(div1)
@@ -71,6 +74,8 @@ document.getElementById("pierre").addEventListener("click", function (){
     else if (pierre && computer === "ciseau") {
         div1.innerHTML = "Joueur: " + pierre + " <-> ordinateur: " + computer;
         div2.innerHTML = "Vous avez gagné !";
+        div2.style.color = "#38761D";
+        div2.style.fontSize = "30px";
         won += 1;
         score();
         container.appendChild(div1);
@@ -79,6 +84,8 @@ document.getElementById("pierre").addEventListener("click", function (){
     else if (pierre && computer === "pierre") {
         div1.innerHTML = "Joueur: " + pierre + " <-> ordinateur: " + computer;
         div2.innerHTML = "Egalité !";
+        div2.style.color = "orange";
+        div2.style.fontSize = "30px";
         container.appendChild(div1);
         container.appendChild(div2);
     }
@@ -88,6 +95,8 @@ document.getElementById("ciseau").addEventListener("click", function (){
     if (ciseau && computer === "pierre") {
         div1.innerHTML = "Joueur: " + ciseau + " <-> ordinateur: " + computer;
         div2.innerHTML = "Vous avez perdu !";
+        div2.style.color = "red";
+        div2.style.fontSize = "30px";
         lost += 1;
         score();
         container.appendChild(div1)
@@ -96,6 +105,8 @@ document.getElementById("ciseau").addEventListener("click", function (){
     else if (ciseau && computer === "feuille") {
         div1.innerHTML = "Joueur: " + ciseau + " <-> ordinateur: " + computer;
         div2.innerHTML = "Vous avez gagné !";
+        div2.style.color = "#38761D";
+        div2.style.fontSize = "30px";
         won += 1;
         score();
         container.appendChild(div1);
@@ -104,6 +115,8 @@ document.getElementById("ciseau").addEventListener("click", function (){
     else if (ciseau && computer === "ciseau") {
         div1.innerHTML = "Joueur: " + ciseau + " <-> ordinateur: " + computer;
         div2.innerHTML = "Egalité !";
+        div2.style.color = "orange";
+        div2.style.fontSize = "30px";
         container.appendChild(div1);
         container.appendChild(div2);
     }
