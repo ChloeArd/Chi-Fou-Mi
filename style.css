@@ -60,10 +60,48 @@ img {
     display: inline-block;
 }
 
-#feuille, #pierre, #ciseau {
-    margin-right: 180px;
+#feuille, #pierre{
+    margin-right: 120px;
 }
 
-#feuille {
-    margin-left: 170px;
+button {
+    background-color: gold;
+    border-radius: 10px;
+    width: 80px;
+}
+
+@media screen and (max-width: 953px) {
+    #container{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    img {
+        width: 120px;
+    }
+    #feuille, #pierre {
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    #player {
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width: 435px) {
+    h1{
+        font-size: 40px;
+    }
+    h1, #players, h2 {
+        margin-bottom: 50px;
+    }
+    img{
+        width: 90px;
+    }
+    #feuille, #pierre {
+        margin-right: 40px;
+    }
 }
