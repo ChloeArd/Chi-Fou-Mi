@@ -55,3 +55,15 @@ img {
     margin-left: 20px;
     width: 200px;
 }
+
+#button {
+    display: inline-block;
+}
+
+#feuille, #pierre, #ciseau {
+    margin-right: 180px;
+}
+
+#feuille {
+    margin-left: 170px;
+}
