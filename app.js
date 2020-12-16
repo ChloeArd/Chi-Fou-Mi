@@ -32,6 +32,7 @@ function playComputer () {
 document.getElementById("feuille").addEventListener("click", function (){
     if (feuille && computer === "ciseau") {
         div1.innerHTML = "Joueur: " + feuille + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Vous avez perdu !";
         div2.style.color = "red";
         div2.style.fontSize = "30px";
@@ -42,6 +43,7 @@ document.getElementById("feuille").addEventListener("click", function (){
     }
     else if (feuille && computer === "pierre") {
         div1.innerHTML = "Joueur: " + feuille + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Vous avez gagné !";
         div2.style.color = "#38761D";
         div2.style.fontSize = "30px";
@@ -52,6 +54,7 @@ document.getElementById("feuille").addEventListener("click", function (){
     }
     else if (feuille && computer === "feuille") {
         div1.innerHTML = "Joueur: " + feuille + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Egalité !";
         div2.style.color = "orange";
         div2.style.fontSize = "30px";
@@ -63,6 +66,7 @@ document.getElementById("feuille").addEventListener("click", function (){
 document.getElementById("pierre").addEventListener("click", function (){
     if (pierre && computer === "feuille") {
         div1.innerHTML = "Joueur: " + pierre + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Vous avez perdu !";
         div2.style.color = "red";
         div2.style.fontSize = "30px";
@@ -73,6 +77,7 @@ document.getElementById("pierre").addEventListener("click", function (){
     }
     else if (pierre && computer === "ciseau") {
         div1.innerHTML = "Joueur: " + pierre + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Vous avez gagné !";
         div2.style.color = "#38761D";
         div2.style.fontSize = "30px";
@@ -83,6 +88,7 @@ document.getElementById("pierre").addEventListener("click", function (){
     }
     else if (pierre && computer === "pierre") {
         div1.innerHTML = "Joueur: " + pierre + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Egalité !";
         div2.style.color = "orange";
         div2.style.fontSize = "30px";
@@ -94,6 +100,7 @@ document.getElementById("pierre").addEventListener("click", function (){
 document.getElementById("ciseau").addEventListener("click", function (){
     if (ciseau && computer === "pierre") {
         div1.innerHTML = "Joueur: " + ciseau + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Vous avez perdu !";
         div2.style.color = "red";
         div2.style.fontSize = "30px";
@@ -104,6 +111,7 @@ document.getElementById("ciseau").addEventListener("click", function (){
     }
     else if (ciseau && computer === "feuille") {
         div1.innerHTML = "Joueur: " + ciseau + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Vous avez gagné !";
         div2.style.color = "#38761D";
         div2.style.fontSize = "30px";
@@ -114,6 +122,7 @@ document.getElementById("ciseau").addEventListener("click", function (){
     }
     else if (ciseau && computer === "ciseau") {
         div1.innerHTML = "Joueur: " + ciseau + " <-> ordinateur: " + computer;
+        div1.style.fontSize = "20px";
         div2.innerHTML = "Egalité !";
         div2.style.color = "orange";
         div2.style.fontSize = "30px";
