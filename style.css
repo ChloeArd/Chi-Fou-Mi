@@ -68,6 +68,7 @@ button {
     background-color: gold;
     border-radius: 10px;
     width: 80px;
+    height: 40px;
 }
 
 @media screen and (max-width: 953px) {
